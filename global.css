@@ -1,0 +1,266 @@
+/* Main section */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700');
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#mySkills,
+#workSection {
+    margin-top: 150px;
+}
+
+body {
+    background-color: #161616;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#mainWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 30px;
+}
+
+#mainSection, #challengerStreamers,
+#grandmasterStreamers {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+}
+
+#menuBarWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    padding: 20px 30px;
+}
+.scrolled-nav-background {
+    background-color: rgb(197, 197, 197);
+}
+
+#logoContainer {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.logo a {
+    font-size: 2.6rem;
+    color: #fff;
+    transition: all ease-in-out 150ms;
+    letter-spacing: 1px;
+}
+
+.logo a:hover {
+    color: #E91E63;
+}
+
+#menu {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.menuLinks {
+    font-size: 24px;
+    padding: 5px 15px;
+}
+
+.menuLinkAnchors {
+    color: #fff;
+    cursor: pointer;
+    transition: all ease-in-out 200ms;
+    letter-spacing: 1.5px;
+}
+
+.menuLinkAnchors:hover {
+    color: #E91E63;
+}
+
+.nameContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 125px;
+    width: 80%;
+    margin-left: 250px;
+}
+
+.name,
+.title {
+    letter-spacing: -5px;
+    font-size: 13rem;
+    color: rgb(255, 255, 255);
+    z-index: 1000;
+    text-shadow: -5px 5px 15px #0c0c0c;
+}
+
+.nameContainer span {
+    display: inline-block;
+    transition: all 400ms cubic-bezier(.19, .84, 1, 1);
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.nameContainer span:hover {
+    transform: translate(0, -25px);
+    color: #E91E63;
+    cursor: default;
+}
+.landingTextContainer {
+    margin-top: 50px;
+}
+.landingText {
+    font-size: 3rem;
+    color: #1E88E5;
+    letter-spacing: 2px;
+}
+
+/* Challenger Streamer Section */
+.ChallengerContainer {
+    width: 100%;
+}
+#challengerStreamers,
+#grandmasterStreamers {
+    justify-content: unset;
+    flex-flow: row wrap;
+    height: auto;
+    overflow: auto;
+}
+.ChallengerList {
+    font-size: 7rem;
+    padding-bottom: 50px;
+    color: #1E88E5;
+}
+.listContainers {
+    width: 100%;
+    display: flex;
+}
+.listContainers.one {
+    justify-content: space-between;
+}
+.listContainers.two {
+    justify-content: flex-start;
+    padding-top: 50px;
+}
+
+.listContainers .challengerStreamersList {
+    width: 30%;
+    max-width: 300px;
+}
+/* .challengerStreamersList {
+    display: flex;
+    box-sizing: border-box;
+    flex-flow: row wrap;
+} */
+.challengerStreamer {
+    padding: 5px;
+    font-size: 2rem;
+    list-style: none;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.challengersContent {
+    color: #E91E63;
+    font-size: 1.8rem;
+}
+
+/* scroll button */
+#mainSection .scroll-button {
+    width: 100%;
+    height: 75px;
+  }
+  #mainSection .scroll-button:hover {
+    color: #E91E63;
+    transition: all 0.2s ease-in-out;
+  }
+  #mainSection .scroll-button {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    text-align: center;
+    width: 30px;
+    margin: 0 auto;
+}
+  
+  #mainSection .scroll-button span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    margin-left: -15px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+  }
+  
+  #mainSection .scroll-button span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: "";
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #E91E63;
+    border-radius: 100%;
+    -webkit-animation: wheelScrolled 2s infinite;
+    animation: wheelScrolled 2s infinite;
+    box-sizing: border-box;
+  }
+  
+  #mainSection .scroll-button span:hover {
+    border: 2px solid #E91E63;
+    transition: all 0.2s ease-in-out;
+  }
+  @keyframes wheelScrolled {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
